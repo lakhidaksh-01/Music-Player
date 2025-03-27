@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Spotify - Your Favourite Music is Here</title>
+</head>
+<body>
+    <header class="header">
+        <div class="brand">
+            <img src="logo1.png" alt="Spotify Logo" id="logo">
+            <h1>Music Player</h1>
+        </div>
+        <nav>
+            <ul class="nav">
+                <li><h3>Made by <a class="nav-link" href="https://www.linkedin.com/in/daksh-lakhi/">DAKSH LAKHI</a></h3></li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+
+    <div class="container">
+        <div class="songList">
+            <div class="music-banner">
+                <div class="music-text">
+                    <h1>Welcome to the Music World</h1>
+                    <p>Explore, Listen, Enjoy</p>
+                </div>
+            </div>
+            <div class="songItemContainer">
+                <div class="songItem">
+                    <img src="" alt="1">
+                    <span class="songName"></span>
+                    <span class="songlistplay"><span class="timestamp">04:41 <i class="fa-solid fa-play-circle songItemPlay" id="1"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="" alt="2">
+                    <span class="songName"></span>
+                    <span class="songlistplay"><span class="timestamp">03:57 <i class="fa-solid fa-play-circle songItemPlay" id="2"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="" alt="3">
+                    <span class="songName"></span>
+                    <span class="songlistplay"><span class="timestamp">04:30 <i class="fa-solid fa-play-circle songItemPlay" id="3"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="" alt="4">
+                    <span class="songName"></span>
+                    <span class="songlistplay"><span class="timestamp">05:01 <i class="fa-solid fa-play-circle songItemPlay" id="4"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="" alt="5">
+                    <span class="songName"></span>
+                    <span class="songlistplay"><span class="timestamp">04:17 <i class="fa-solid fa-play-circle songItemPlay" id="5"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="" alt="6">
+                    <span class="songName"></span>
+                    <span class="songlistplay"><span class="timestamp">03:25 <i class="fa-solid fa-play-circle songItemPlay" id="6"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="" alt="7">
+                    <span class="songName"></span>
+                    <span class="songlistplay"><span class="timestamp">04:29 <i class="fa-solid fa-play-circle songItemPlay" id="7"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="" alt="8">
+                    <span class="songName"></span>
+                    <span class="songlistplay"><span class="timestamp">03:50 <i class="fa-solid fa-play-circle songItemPlay" id="8"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="" alt="9">
+                    <span class="songName"></span>
+                    <span class="songlistplay"><span class="timestamp">02:33 <i class="fa-solid fa-play-circle songItemPlay" id="9"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="" alt="10">
+                    <span class="songName"></span>
+                    <span class="songlistplay"><span class="timestamp">04:33 <i class="fa-solid fa-play-circle songItemPlay" id="10"></i></span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+
+    <div class="bottom">
+        <input type="range" name="range" id="myProgressBar" min="0" max="100">
+        <div class="icons">
+            <i class="fa-solid fa-backward-step" onclick="previous()"></i>
+            <i class="fa-solid fa-play-circle" id="masterPlay"></i>
+            <i class="fa-solid fa-forward-step" onclick="next()"></i>
+        </div> 
+        <div class="songInfo">
+            <img src="playing.gif" width="42px" alt="" id="gif"> <span id="masterSongName">Warriyo - Mortals [NCS Release]</span>
+        </div>       
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
