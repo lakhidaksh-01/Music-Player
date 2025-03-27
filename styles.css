@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+/* Global Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body */
+body {
+    background-color: #0d0d21; /* Dark blue theme */
+    font-family: 'Ubuntu', sans-serif;
+    color: #E3E6EF;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    background: linear-gradient(135deg, #6a14ff, #3500d3); /* Deep purple gradient */
+    color: white;
+    height: 80px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.brand img {
+    width: 50px;
+    margin-right: 12px;
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    padding: 0 18px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #C2E9FB;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #FFD700; /* Gold effect */
+    text-decoration: underline;
+}
+
+/* Main Container */
+.container {
+    min-height: 70vh;
+    background-color: #191a2e; /* Dark card background */
+    color: #E3E6EF;
+    font-family: 'Varela Round', sans-serif;
+    display: flex;
+    margin: 30px auto;
+    width: 85%;
+    border-radius: 15px;
+    padding: 35px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Music Banner */
+.music-banner {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    background: url('banner.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F8FAFB;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    font-size: 1.8rem;
+}
+
+/* Song List */
+.songList {
+    width: 90%;
+}
+
+/* Song Items */
+.songItemContainer {
+    margin-top: 50px;
+    width: 100%;
+}
+
+.songItem {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    background: #252746;
+    color: #F1F1F1;
+    margin: 15px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    padding: 15px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 2px 2px 12px rgba(255, 255, 255, 0.05);
+}
+
+.songItem:hover {
+    background: #3a3d63;
+    transform: scale(1.02);
+}
+
+.songItem img {
+    width: 50px;
+    margin: 0 18px;
+    border-radius: 50%;
+    border: 2px solid #FFD700; /* Gold border */
+}
+
+/* Timestamp */
+.timestamp {
+    margin: 0 20px;
+    font-size: 1rem;
+}
+
+.timestamp i {
+    cursor: pointer;
+    color: #FFD700; /* Gold */
+    transition: transform 0.2s ease, color 0.3s;
+}
+
+.timestamp i:hover {
+    transform: scale(1.15);
+    color: #ffdd57;
+}
+
+/* Song Info */
+.songInfo {
+    position: absolute;
+    left: 12vw;
+    font-family: 'Varela Round', sans-serif;
+    color: #F8FAFB;
+}
+
+.songInfo img {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* Bottom Music Player */
+.bottom {
+    border-top: 2px solid #6a14ff;
+    position: sticky;
+    bottom: 0;
+    height: 140px;
+    background: #111324;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Music Player Controls */
+.icons {
+    margin-top: 18px;
+}
+
+.icons i {
+    cursor: pointer;
+    font-size: 2.8rem;
+    margin: 8px;
+    color: white;
+    transition: transform 0.3s ease, color 0.3s;
+}
+
+.icons i:hover {
+    transform: scale(1.2);
+    color: #FFD700; /* Gold */
+}
+
+/* Progress Bar */
+#myProgressBar {
+    width: 80vw;
+    cursor: pointer;
+    background: #2e3356;
+    height: 12px;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+#masterSongName {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-left: 15px;
+    color: #FFD700; /* Gold text */
+}
+
+/* Animation for Playing Song */
+#gif {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+/* 📱 Responsive Design for Mobile (Below 768px) */
+@media (max-width: 768px) {
+    
+    /* Header */
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .brand {
+        font-size: 1rem;
+    }
+
+    .brand img {
+        width: 40px;
+    }
+
+    /* Navigation */
+    nav ul {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        padding: 8px 0;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+
+    /* Music Banner */
+    .music-banner {
+        height: 150px;
+        font-size: 1.5rem;
+    }
+
+    /* Main Container */
+    .container {
+        width: 95%;
+        padding: 20px;
+        min-height: 60vh;
+    }
+
+    /* Song Items */
+    .songItem {
+        flex-direction: row;
+        padding: 10px;
+    }
+
+    .songItem img {
+        width: 40px;
+        margin: 0 10px;
+    }
+
+    .timestamp {
+        font-size: 0.9rem;
+        margin: 0 10px;
+    }
+
+    /* Bottom Player */
+    .bottom {
+        height: 120px;
+        padding: 10px;
+    }
+
+    .icons i {
+        font-size: 2rem;
+        margin: 4px;
+    }
+
+    #myProgressBar {
+        width: 90vw;
+        height: 8px;
+    }
+
+    #masterSongName {
+        font-size: 1rem;
+    }
+
+    /* Song Info */
+    .songInfo {
+        left: 5vw;
+        font-size: 0.9rem;
+    }
+}
